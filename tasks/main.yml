@@ -60,7 +60,7 @@
   file:
     path: "{{ debmirror_config_path }}/trusted.gpg.d/"
     state: directory
-    mode: 0755 
+    mode: 0755
   tags:
     - setup
 
@@ -93,13 +93,13 @@
   become: true
   template:
     src: "{{ item.value.template_file | default('debmirror.conf.j2') }}"
-    dest: "{{ debmirror_config_path }}/{{ item.value }}.conf"
+    dest: "{{ debmirror_config_path }}/{{ item }}.conf"
     # backup: true
     mode: 0644
   with_dict: "{{ debmirror_config }}"
   tags:
     - setup
-    - configuration 
+    - configuration
 
 
 
