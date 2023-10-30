@@ -93,7 +93,7 @@
   become: true
   template:
     src: "{{ item.value.template_file | default('debmirror.conf.j2') }}"
-    dest: "{{ debmirror_config_path }}/{{ item }}.conf"
+    dest: "{{ debmirror_config_path }}/{{ item.key }}.conf"
     # backup: true
     mode: 0644
   with_dict: "{{ debmirror_config }}"
