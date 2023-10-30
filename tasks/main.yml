@@ -49,7 +49,7 @@
     state: directory
     owner: "{{ debmirror_user }}"
     group: "{{ debmirror_group }}"
-    mode: "{{ 0755 }}"
+    mode: 0755
     recurse: yes
   become: true
   tags:

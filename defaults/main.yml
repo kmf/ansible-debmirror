@@ -6,7 +6,7 @@ debmirror_keyring: trustedkeys.kbx
 
 debmirror_config_path: /etc/debmirror
 debmirror_mirror_path: /opt/mirror
-debmirror_packages: ['debmirror', 'gnupg', 'xz-utils' ]
+debmirror_packages: ['debmirror', 'gnupg', 'xz' ]
 debmirror_nice_lvl: 19
 debmirror_clock: 0,8,16:30
 debmirror_user: apt_mirror
